@@ -1,13 +1,22 @@
 import {Menu} from "antd";
 import {HomeFilled} from "@ant-design/icons";
+import { useNavigate} from "react-router-dom";
 
 function AppHeader() {
+const navigate=useNavigate()
+const onMenuClick=(item)=>{
+     navigate(`/${item.key}`)
+}
+
+
   return (<div className="appHeader">
-  <Menu mode="horizontal"
+  <Menu onClick={onMenuClick} mode="horizontal"
+
+
 items={[
 {
 label:<HomeFilled/>,
-key:"home"
+key:""
 },
 
 {
@@ -17,15 +26,15 @@ key:"men",
 children:[
 {
 label:"Shirt",
-key:"shirt"
+key:"men-shirt"
 },
 {
 label:"Shoes",
-key:"shoes"
+key:"men-shoes"
 },
 {
 label:"Watches",
-key:"watches"
+key:"men-watches"
 },
 ]
 },
@@ -38,19 +47,19 @@ key:"women",
 children:[
 {
 label:"Dresses",
-key:"dresses"
+key:"women-dresses"
 },
 {
 label:"Shoes",
-key:"shoes"
+key:"women-shoes"
 },
 {
 label:"Watches",
-key:"watches"
+key:"women-watches"
 },
 {
 label:"Bags",
-key:"bags"
+key:"women-bags"
 },
 {
 label:"Jewellery",
@@ -69,6 +78,10 @@ key:"accessories"
 
 ]}
  />
+
+
+
+
 
   </div>);
 }

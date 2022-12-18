@@ -8,8 +8,13 @@ height: 100vw;
 
 .appHeader{
 height: 60px;
+background-color:#D8D8D8;
 }
 
+.itemCardBackground
+{
+background-color:#D8D8D8;
+}
 
 .pageContent{
 display:flex;
@@ -19,4 +24,13 @@ overflow-y:auto;
 
 .appFooter{
 height: 120px;
+}
+
+.itemCardImage{
+height: 150px !important;
+object-fit: scale-down;
+}
+
+.itemCard, .itemCardBadge{
+margin: 8px;
 }
