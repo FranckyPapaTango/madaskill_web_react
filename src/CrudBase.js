@@ -1,20 +1,15 @@
 import "./CrudBase.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./layout/Navbar";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AddUser from "./users/AddUser";
 import EditUser from "./users/EditUser";
 import ViewUser from "./users/ViewUser";
 
-import Footer2 from "./components/Footer2";
 
 
 function CrudBase() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
 
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -23,13 +18,6 @@ function CrudBase() {
           <Route exact path="/viewuser/:id" element={<ViewUser />} />
         </Routes>
 
-
-
-
-      <Footer2/>
-
-      </Router>
-    </div>
   );
 }
 

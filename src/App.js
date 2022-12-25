@@ -1,23 +1,23 @@
 import "./App.css";
-import AppHeader from "./components/header/AppHeader";
-import PageContent from "./components/pageContent/PageContent";
-import AppFooter from "./components/footer/AppFooter";
-
-import { Container } from "react-bootstrap";
-import { BrowserRouter } from "react-router-dom";
+import Navbar from "./layout/Navbar";
+import CrudBase from "./CrudBase";
+import { BrowserRouter as Router} from "react-router-dom";
+import Footer2 from "./components/Footer2";
 
 function App() {
-  return(
-  <div className="App">
+  return (
+    <div className="App">
+      <Router>
 
-<BrowserRouter>
-    <AppHeader/>
-    <PageContent/>
-    <AppFooter/>
-</BrowserRouter>
+<Navbar />
 
-  </div>
-        );
+<CrudBase />
+
+<Footer2 />
+
+      </Router>
+    </div>
+  );
 }
 
 
